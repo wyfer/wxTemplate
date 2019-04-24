@@ -1,0 +1,2 @@
+<!--components/i-timer/index.wxml-->
+<text>{{time}}</text>

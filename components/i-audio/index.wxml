@@ -1,0 +1,21 @@
+<!--components/i-audio/index.wxml-->
+<view class="plan-tab-comment-radio">
+    <view class="control">
+        <image hidden="{{playing}}" src="/static/icons/radio-play.png" catchtouchstart="playAudio" data-idx="{{idx}}" data-url="{{url}}"></image>
+        <image hidden="{{!playing}}" src="/static/icons/radio-pause.png" catchtouchstart="pauseAudio" data-idx="{{idx}}" data-url="{{url}}"></image>
+    </view>
+    <view class="start-time">{{currentTimeShow}}</view>
+    <view class="plan-tab-comment-radio-slider">
+        <slider
+                block-size="15"
+                bindchange="sliderChange"
+                activeColor="#06A8FE"
+                blockSrc="/static/icons/slider_icons.png"
+                backgroundColor="#c3d6e0"
+                min="0"
+                value="{{currentTime}}"
+                max="{{duration}}"
+                step="1"/>
+    </view>
+    <view class="duration">{{durationShow}}</view>
+</view>

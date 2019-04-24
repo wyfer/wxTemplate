@@ -1,0 +1,18 @@
+<!--pages/login/login.wxml-->
+<view wx:if="{{canIUse}}">
+
+    <view class="login-btn">
+        <button class='bottom green-color' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="wxLogin">
+            微信用户一键登入
+            <image src="/static/icons/btn-icon.png" class="btn-icon" alt=""></image>
+        </button>
+
+        <navigator url="/pages/login/appLogin/appLogin" class='phone-btn'>
+            手机号码登录
+        </navigator>
+    </view>
+</view>
+
+<view wx:else>请升级微信版本</view>
+
+

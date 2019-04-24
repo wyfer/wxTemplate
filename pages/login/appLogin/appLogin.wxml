@@ -1,0 +1,75 @@
+<!--pages/login/appLogin/appLogin.wxml-->
+<view wx:if="{{canIUse}}">
+    <view class="app-tabs">
+        <view class="app-tab {{select_tab == 0 ? 'active': ''}} left-tab" bindtap="onappselect" data-id="0">
+            <text>验证码登录</text>
+        </view>
+        <view class="app-tab {{select_tab == 1 ? 'active': ''}} right-tab" bindtap="onappselect" data-id="1">
+            <text>账号密码登录</text>
+        </view>
+    </view>
+
+    <view class="app-cont">
+        <form bindsubmit="formSubmit" bindreset="formReset" class="phone-form">
+
+            <navigator url="/pages/login/appLogin/area/area" class="item">
+                <view class="item-title">
+                    <image class="item-title-icon" src="/static/icons/phone-type.png"></image>
+                    {{areaText}}+{{areaCode}}
+                </view>
+                <image src="/static/icons/mine_right.png"></image>
+            </navigator>
+
+            <view class='changeInfo'>
+                <view class='changeInfoName areaform {{phoneLine?"line":""}}'>
+                    <view class="phone-icon">
+                        <image src="/static/icons/phone-phone.png"></image>
+                    </view>
+                    <input class="phone" type="number" name="phone" maxlength="11" placeholder='请输入手机号'
+                           value='{{phoneCode}}'
+                           style="width: 80%" auto-focus bindinput="showPhoneLine"/>
+                </view>
+
+
+                <view class='changeInfoName areaform {{codeLine?"line":""}}' wx:if="{{select_tab == 0}}">
+                    <view class="code-icon">
+                        <image src="/static/icons/phone-pwd.png"></image>
+                    </view>
+                    <input class="phone" type="number" name="security" placeholder='请输入验证码'
+                           value='{{securityCode}}' style="width: 70%"
+                           bindinput="showCodeLine"/>
+                    <view class='codeBtn' wx:if="{{disabled}}">{{codename}}</view>
+                    <view class='codeBtn' bindtap='getVerificationCode' wx:else>{{codename}}</view>
+                </view>
+
+                <view class='changeInfoName areaform {{codeLine?"line":""}}' wx:if="{{select_tab == 1}}">
+                    <view class="code-icon">
+                        <image src="/static/icons/app-pwd.png"></image>
+                    </view>
+                    <input class="phone" type="password" name="password"  placeholder='请输入密码'
+                           value='{{pwdCode}}'
+                           style="width: 80%" bindinput="showPwdLine"/>
+                </view>
+
+                <view class="phone-login-btn">
+                    <!--<view class="info">-->
+                    <!--<checkbox checked/>-->
+                    <!--我已经同意下班加油站相关服务条款-->
+                    <!--</view>-->
+                    <button class='bottom green-color' formType="submit">
+                        登录
+                        <image src="/static/icons/btn-icon.png" class="btn-icon" alt=""></image>
+                    </button>
+                </view>
+            </view>
+        </form>
+    </view>
+</view>
+
+<view wx:else>请升级微信版本</view>
+<i-message id="message" />
+<i-action-sheet visible="{{ actionShow }}" actions="{{ actions }}" show-cancel bind:cancel="handleCancel" bind:click="handleClickItem" />
+<i-message id="message" />
+
+
+

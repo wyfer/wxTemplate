@@ -1,0 +1,52 @@
+/* components/i-audio/index.wxss */
+.plan-tab-comment-radio{
+    width: 100%;
+    background-color: #d8f1fe;
+    height: 95rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-items: center;
+    border-radius: 20rpx;
+}
+
+.plan-tab-comment-radio .control{
+    width: 79rpx;
+    padding-left: 10rpx;
+    text-align: center;
+}
+
+.plan-tab-comment-radio .control image{
+    width: 80rpx;
+    height: 80rpx;
+    top: 5rpx;
+    padding: 15rpx;
+    position: relative;
+}
+
+.plan-tab-comment-radio .start-time{
+    width: 102rpx;
+    text-align: center;
+    color: #666666;
+    font-size: 24rpx;
+}
+
+.plan-tab-comment-radio .duration{
+    color: #666666;
+    font-size: 24rpx;
+    width: 79rpx;
+    margin-right: 20rpx;
+    text-align: center;
+}
+
+.plan-tab-comment-radio .plan-tab-comment-radio-slider{
+    width: 300rpx;
+    background-color: #d8f1fe;
+    padding: 0 16rpx;
+    /*border-radius: 30rpx;*/
+}
+
+.plan-tab-comment-radio .plan-tab-comment-radio-slider slider{
+    margin: 10rpx 0;
+    z-index: 10000;
+}

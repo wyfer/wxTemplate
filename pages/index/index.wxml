@@ -1,0 +1,63 @@
+<!--index.wxml-->
+<view class="hy-container">
+
+    <view style="margin-top: 100rpx">
+        {{loginStatus}}
+    </view>
+
+    <button bindtap="checklogin">判断是否登录</button>
+
+    <view style="margin: 50rpx 0; background: #FFFFFF">
+        <view style="text-align: center; font-size: 30rpx">文字展开</view>
+        <view style="width: 690rpx; margin: 0 auto">
+            <i-text text="{{text}}"></i-text>
+        </view>
+    </view>
+    <view style="margin: 50rpx 0; background: #FFFFFF">
+        <view style="text-align: center; font-size: 30rpx">时间戳转时间</view>
+        <view style="width: 690rpx; margin: 0 auto">
+            {{time}} =>
+            <i-timer class="time" timer="{{time}}"></i-timer>
+        </view>
+    </view>
+
+    <view style="margin: 50rpx 0; background: #FFFFFF">
+        <view style="text-align: center; font-size: 30rpx">时间戳转时间</view>
+        <view style="width: 690rpx; margin: 0 auto">
+            <button bindtap="choseTime">选择时间</button>
+            选择的时间 => {{date[0]}}:{{date[1]}} - {{date[2]}}:{{date[3]}}
+            <i-date-time show="{{showChoseTime}}" bind:choseTime="getTime"></i-date-time>
+        </view>
+    </view>
+
+    <view class="hy-cell">
+        <view class="hy-cell-title-2">
+            <image class="left-icon" src="/static/icons/index_left.png"></image>
+            左右滑动列表
+            <image class="right-icon" src="/static/icons/index_right.png"></image>
+        </view>
+        <view class="hy-cell-cont">
+            <navigator class="item" url='' wx:for="[0,1,2,3,4,5,6,7,8]"
+                       wx:for-item="i" wx:key="i">
+                <image src="https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=2959708265,3856768320&fm=58&bpow=705&bpoh=675"
+                       background-size="cover"></image>
+                <view class="item-dis">
+                    <view>
+                        <text class="insert-data-mor">45345</text>内容
+                    </view>
+                    <view style="padding-right: 10rpx">
+                        <text class="insert-data-card">123120</text>
+                        内容
+                    </view>
+                </view>
+                <view class="item-msg">
+                    <view class="item-msg-title">#标题标题#</view>
+                    <view class="item-msg-days">
+                        <text>23523</text>
+                        内容
+                    </view>
+                </view>
+            </navigator>
+        </view>
+    </view>
+</view>

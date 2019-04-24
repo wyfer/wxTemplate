@@ -1,0 +1,27 @@
+/* components/i-text/index.wxss */
+.text-more-close {
+    margin-top: 10 rpx;
+    width: 100%;
+    height: 40 rpx;
+    font-size: 27 rpx;
+    color: #06A8FE;
+}
+
+.text {
+    width: 100%;
+    height: auto;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.ellipsis {
+    -webkit-line-clamp: 5;
+    opacity: 0.75
+}
+
+.unellipsis {
+    -webkit-line-clamp: 0;
+    opacity: 1
+}

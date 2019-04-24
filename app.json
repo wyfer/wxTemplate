@@ -1,0 +1,62 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/login/login",
+    "pages/login/phoneLogin/phoneLogin",
+    "pages/mine/mine",
+    "pages/search/search",
+    "pages/login/appLogin/appLogin",
+    "pages/login/appLogin/area/area",
+    "pages/list/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "wxTemplate",
+    "backgroundColor": "#f9f9f9",
+    "enablePullDownRefresh": true,
+    "onReachBottomDistance": 60
+  },
+  "requiredBackgroundModes": [
+    "audio"
+  ],
+  "usingComponents": {
+    "i-timer": "components/i-timer/index",
+    "i-audio": "components/i-audio/index",
+    "i-text": "components/i-text/index",
+    "i-date-time": "components/i-date-time/index"
+  },
+  "tabBar": {
+    "position": "bottom",
+    "backgroundColor": "#fff",
+    "borderStyle": "white",
+    "color": "#333333",
+    "selectedColor": "#06A8FE",
+    "list": [
+      {
+        "iconPath": "static/icons/tabbar_icon_home.png",
+        "selectedIconPath": "static/icons/tabbar_icon_home_active.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "iconPath": "static/icons/tabbar_icon_plan.png",
+        "selectedIconPath": "static/icons/tabbar_icon_plan_active.png",
+        "pagePath": "pages/list/index",
+        "text": "列表"
+      },
+      {
+        "iconPath": "static/icons/tabbar_icon_mine.png",
+        "selectedIconPath": "static/icons/tabbar_icon_mine_active.png",
+        "pagePath": "pages/mine/mine",
+        "text": "我的"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "sitemapLocation": "sitemap.json"
+}

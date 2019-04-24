@@ -1,0 +1,35 @@
+/* pages/login/appLogin/area/area.wxss */
+page{
+    height: 100%;
+    width: 100%;
+    background: #ffffff;
+}
+.container{
+    background: #ffffff;
+    height: auto;
+    overflow: hidden;
+    width: 100%;
+    border-top: solid 1rpx #f5f5f5;
+}
+
+.area-list{
+    width: 100%;
+    height: auto;
+}
+.area-cell{
+    width: 100%;
+    padding: 0 20rpx;
+    height: 80rpx;
+    border-bottom: solid 1rpx #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 30rpx;
+    color: #333333;
+}
+.area-cell .l{
+
+}
+.area-cell .r{
+    color: #386A9B;
+}

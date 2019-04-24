@@ -1,0 +1,24 @@
+<!--pages/mine/mine.wxml-->
+<view class="container">
+    <view class="mine-head">
+        <view class="profile-info" hidden="{{!isLogin}}">
+            <image class="avatar" src="{{userAvatarUrl}}"></image>
+            <navigator class="info" url="/pages/mine/mineHomePage/mineHomePage">
+                <text class="name">{{nickName}}</text>
+            </navigator>
+            <navigator url="/pages/mine/mineHomePage/mineHomePage">
+                <image class="right-icon" src="/static/icons/mine_right.png"></image>
+            </navigator>
+        </view>
+        <view class="mine-head-bg"></view>
+        <view class="profile-info" hidden="{{isLogin}}">
+            <image class="avatar" src="/static/icons/mine_author_login.png"></image>
+            <navigator class="info" url="/pages/login/login">
+                <view class="name">{{nickName}}<text class="mine-login-text">登录后享受更多服务</text></view>
+            </navigator>
+            <image class="right-icon" src="/static/icons/mine_right.png"></image>
+        </view>
+    </view>
+
+    <view class="mine-logout" bindtap="exitLogin" hidden="{{!isLogin}}">退出登录</view>
+</view>

@@ -1,0 +1,229 @@
+/* pages/phoneLogin/phoneLogin.wxss */
+page{
+    height: 100%;
+    width: 100%;
+    background: #ffffff;
+}
+
+.phone-logo{
+    width: 200rpx;
+    height: auto;
+    margin: 0 auto 100rpx auto;
+    padding-top: 100rpx;
+}
+
+.phone-logo image{
+    width: 100%;
+    height: 100rpx;
+    margin: 0 auto;
+}
+
+
+.changeInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+    /*padding-top: 200rpx;*/
+}
+.changeInfoName{
+    position: relative;
+    height: 90rpx;
+    width: 100%;
+    background: #fff;
+    margin-bottom: 10rpx;
+    padding-left: 20rpx;
+    box-sizing: border-box;
+}
+.line{
+    border-bottom: solid 1px #3EBCFF;
+}
+
+.areaform{
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+}
+
+.phone-icon{
+    position: absolute;
+    height: 40rpx;
+    width: 40rpx;
+    left: 2rpx;
+    top: 25rpx;
+}
+.type-icon{
+    position: absolute;
+    height: 40rpx;
+    width: 40rpx;
+    left: 0;
+    top: 25rpx;
+}
+.code-icon{
+    position: absolute;
+    height: 40rpx;
+    width: 35rpx;
+    left: 3rpx;
+    top: 25rpx;
+}
+.type-icon image{
+    height: 40rpx;
+    width: 40rpx;
+}
+.code-icon image{
+    height: 40rpx;
+    width: 35rpx;
+}
+.phone-icon image{
+    height: 40rpx;
+    width: 35rpx;
+}
+
+.area-code{
+    padding-left: 10rpx;
+    line-height: 80rpx;
+    font-size: 30rpx;
+}
+
+.dash{
+    line-height: 70rpx;
+    overflow: hidden;
+    text-align: center;
+}
+
+.phone{
+    padding: 0 12rpx 0 70rpx;
+    font-size: 30rpx;
+}
+
+.codeBtn{
+    position: absolute;
+    right: 0;
+    top: 20rpx;
+    color: #848484;
+    text-align: center;
+    width: 29%;
+    background-color: #ffffff;
+    font-size: 28rpx;
+    height: 50rpx;
+    line-height: 50rpx;
+    border-left: solid 2rpx #bdbdbd;
+}
+
+.info{
+    font-size: 23rpx;
+    line-height: 23rpx;
+    margin-top: 10rpx;
+}
+
+.changeInfoName input{
+    width: 100%;
+    height:100%;
+}
+.changeBtn{
+    width: 100%;
+    height: 80rpx;
+    border-radius: 6rpx;
+    margin: 50rpx auto 0 auto;
+    font-size: 25rpx;
+    line-height: 80rpx;
+    color: #ffffff;
+    background-color: #2d8cf0;
+    box-shadow: 5rpx 20rpx 20rpx rgba(18,150,219,.1);
+    text-shadow: 1rpx 5rpx 5rpx rgba(0,0,0, .1);
+}
+
+.changeBtn::after {
+    border: 0;
+}
+
+.phone-login-btn{
+    width: 100%;
+    height: auto;
+    margin-top: 50rpx;
+}
+
+.bottom {
+    border-radius: 50rpx;
+    /*margin: 25rpx 50rpx;*/
+    padding: 5px 0;
+    margin: 50rpx 50rpx;
+    font-size: 30rpx;
+}
+
+.green-color{
+    color: #ffffff;
+    background-color: #06A8FE;
+    box-shadow: 0 0 50rpx rgba(6,168,254,.2);
+    font-weight: 600;
+    position: relative;
+}
+
+.btn-icon{
+    position: absolute;
+    width: 40rpx;
+    height: 40rpx;
+    left: 20rpx;
+    top: 30rpx;
+}
+
+/*  重写 checkbox 样式  */
+/* 未选中的 背景样式 */
+checkbox .wx-checkbox-input{
+    border-radius: 50%;/* 圆角 */
+    width: 40rpx; /* 背景的宽 */
+    height: 40rpx; /* 背景的高 */
+}
+/* 选中后的 背景样式 （红色背景 无边框 可根据UI需求自己修改） */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked{
+    border: solid 1rpx rgba(255,255,255,0);
+    background: #06A8FE;
+}
+/* 选中后的 对勾样式 （白色对勾 可根据UI需求自己修改） */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before{
+    border-radius: 50%;/* 圆角 */
+    width: 40rpx;/* 选中后对勾大小，不要超过背景的尺寸 */
+    height: 40rpx;/* 选中后对勾大小，不要超过背景的尺寸 */
+    line-height: 40rpx;
+    text-align: center;
+    font-size:30rpx; /* 对勾大小 30rpx */
+    color:#fff; /* 对勾颜色 白色 */
+    background: transparent;
+    transform:translate(-50%, -50%) scale(1);
+    -webkit-transform:translate(-50%, -50%) scale(1);
+}
+
+
+.item{
+    padding: 0 6rpx;
+    width: 100%;
+    height: 100rpx;
+    background: #ffffff;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.item .item-title{
+    display: flex;
+    font-size: 28rpx;
+    color: #444444;
+    padding: 0 30rpx;
+    height: 100rpx;
+    justify-items: center;
+    align-items: center;
+}
+.item .item-title .item-title-icon{
+    width: 38rpx;
+    height: 38rpx;
+    margin-right: 30rpx;
+}
+
+.item image{
+    width: 14rpx;
+    height: 25rpx;
+    margin-right: 30rpx;
+}

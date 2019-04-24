@@ -1,0 +1,14 @@
+<!--index.wxml-->
+<view class="container">
+    <text style="font-size: 30rpx;">请分别给list中的对象添加不同的语音播放路径，可以查看演示效果</text>
+    <view class="list-cell" wx:for="{{list}}" wx:for-item="i" wx:for-index="idx" wx:key="i">
+        <i-audio
+                bind:parentReceive="parentCallBack"
+                cid="{{i}}"
+                idx="{{idx}}"
+                url="{{i.src}}"
+                status="{{i.isPlaying}}"
+                pUrl="{{playingPath}}">
+        </i-audio>
+    </view>
+</view>

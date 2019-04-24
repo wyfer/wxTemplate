@@ -1,0 +1,10 @@
+<!--pages/login/appLogin/area/area.wxml-->
+<view class="container">
+    <view class="area-list">
+        <view class="area-cell" wx:for="{{cities}}" wx:for-item="i" wx:key="i" data-name="{{i.name}}" data-value="{{i.value}}" bindtap="selectCity">
+            <view class="l">{{i.name}}</view>
+            <view class="r">{{i.value}}</view>
+        </view>
+    </view>
+</view>
+

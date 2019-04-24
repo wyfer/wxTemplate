@@ -1,0 +1,3 @@
+<!--components/i-text/index.wxml-->
+<text class="text {{ellipsis?'ellipsis':'unellipsis'}}">{{text}}</text>
+<view class="text-more-close" hidden="{{hiddenMore}}" catchtap="showMore">更多</view>

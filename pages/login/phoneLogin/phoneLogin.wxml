@@ -1,0 +1,47 @@
+<!--pages/phoneLogin/phoneLogin.wxml-->
+<view>
+    <form bindsubmit="formSubmit" bindreset="formReset" class="phone-form">
+
+        <navigator url="/pages/login/appLogin/area/area" class="item">
+            <view class="item-title">
+                <image class="item-title-icon" src="/static/icons/phone-type.png"></image>
+                {{areaText}}+{{areaCode}}
+            </view>
+            <image src="/static/icons/mine_right.png"></image>
+        </navigator>
+
+        <view class='changeInfo'>
+            <view class='changeInfoName areaform {{phoneLine?"line":""}}'>
+                <view class="phone-icon">
+                    <image src="/static/icons/phone-phone.png"></image>
+                </view>
+                <input class="phone" type="number" name="phone" maxlength="11" placeholder='请输入手机号'
+                       value='{{phoneCode}}'
+                       style="width: 80%" auto-focus bindinput="showPhoneLine"/>
+            </view>
+            <view class='changeInfoName areaform {{codeLine?"line":""}}'>
+                <view class="code-icon">
+                    <image src="/static/icons/phone-pwd.png"></image>
+                </view>
+                <input class="phone" type="number" name="security" placeholder='请输入验证码'
+                       value='{{securityCode}}' style="width: 70%"
+                       bindinput="showCodeLine"/>
+                <view class='codeBtn' wx:if="{{disabled}}">{{codename}}</view>
+                <view class='codeBtn' bindtap='getVerificationCode' wx:else>{{codename}}</view>
+            </view>
+            <view class="phone-login-btn">
+                <!--<view class="info">-->
+                    <!--<checkbox checked/>-->
+                    <!--我已经同意下班加油站相关服务条款-->
+                <!--</view>-->
+                <button class='bottom green-color' formType="submit">
+                    登录
+                    <image src="/static/icons/btn-icon.png" class="btn-icon" alt=""></image>
+                </button>
+            </view>
+        </view>
+    </form>
+    <i-toast id="toast"/>
+    <i-action-sheet visible="{{ actionShow }}" actions="{{ actions }}" show-cancel bind:cancel="handleCancel" bind:click="handleClickItem" />
+    <i-message id="message" />
+</view>

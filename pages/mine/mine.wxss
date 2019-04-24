@@ -1,0 +1,121 @@
+/* pages/mine/mine.wxss */
+page{
+    height: 100%;
+    width: 100%;
+    background: #fafafa;
+}
+.container{
+    background: #fafafa;
+    height: auto;
+    overflow: hidden;
+    width: 100%;
+}
+.mine-head{
+    width: 100%;
+    background: #fafafa;
+    padding: 30rpx;
+    overflow: hidden;
+    position: relative;
+}
+
+.mine-head-bg{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0 auto;
+    height: 140rpx;
+    z-index: 0;
+    background: #0196FE;
+}
+.profile-info{
+    position: relative;
+    width: 690rpx;
+    height: 225rpx;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    padding: 0 30rpx;
+    background: #ffffff;
+    border-radius: 30rpx;
+    z-index: 10000000;
+    box-shadow: 0 0 50rpx rgba(163,213,251,.5)
+}
+
+.profile-info .avatar{
+    height: 148rpx;
+    width: 148rpx;
+    border-radius: 20rpx;
+    background: #ffffff;
+    z-index: 10000;
+    position: relative;
+}
+
+.profile-info .info{
+    flex: 1;
+    z-index: 10000;
+    position: relative;
+    height: 165rpx;
+    display: flex;
+    align-items: center;
+}
+
+.profile-info .name{
+    display: block;
+    height: 45rpx;
+    line-height: 45rpx;
+    color: #333333;
+    font-size: 30rpx;
+    font-weight: bold;
+    margin-left: 30rpx;
+    text-align: left;
+}
+
+.profile-info .right-icon{
+    width: 14rpx;
+    height: 25rpx;
+}
+
+button{
+    background-color: rgba(0,0,0,0);
+}
+
+button.button-hover {
+    background-color: rgba(0,0,0,0);
+}
+
+button::after{
+    border: none;
+}
+
+.profile-info .mine-login-text{
+    display: block;
+    height: 30rpx;
+    line-height: 30rpx;
+    margin-bottom: 10rpx;
+    color: #666666;
+    font-size: 24rpx;
+    text-align: left;
+}
+
+.act-login-button{
+    position: absolute;
+    width: 100rpx;
+    height: 50rpx;
+    right: 10rpx;
+    bottom: 10rpx;
+    line-height: 50rpx;
+    font-size: 22rpx;
+}
+
+.mine-logout{
+    height: 89rpx;
+    width: 640rpx;
+    margin: 98rpx auto;
+    line-height: 89rpx;
+    text-align: center;
+    background: #019AFF;
+    border-radius: 20rpx;
+    color: #FFFFFF;
+    font-size: 36rpx;
+}

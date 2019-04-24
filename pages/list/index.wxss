@@ -1,0 +1,22 @@
+/**index.wxss**/
+page{
+    width: 100%;
+    height: 100%;
+    background: #fafafa;
+}
+
+.container{
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    position: relative;
+    z-index: 0;
+}
+
+.list-cell{
+    width: 100%;
+    margin: 10rpx 0;
+    padding: 20rpx 30rpx;
+}
